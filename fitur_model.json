@@ -1,15 +1,30 @@
-[
-  "Suhu Tanah",
-  "Kelembaban Tanah",
-  "Suhu Udara",
-  "Kelembaban Udara",
-  "Durasi Pompa Sebelumnya",
-  "Menit Sejak ON Terakhir",
-  "Kelembaban Tanah Trend",
-  "Suhu Tanah Trend",
-  "Delta Kelembaban",
-  "Delta Suhu Tanah",
-  "Selisih Suhu",
-  "Indeks Kering",
-  "Kelembaban Udara Trend"
-]
+{
+  "features": [
+    "air_temperature",
+    "air_humidity",
+    "soil_temperature",
+    "soil_humidity"
+  ],
+  "feature_count": 4,
+  "label_classes": [
+    "OFF",
+    "ON"
+  ],
+  "model_type": "DecisionTreeClassifier",
+  "best_params": {
+    "criterion": "entropy",
+    "max_depth": 15,
+    "min_samples_leaf": 1,
+    "min_samples_split": 2
+  },
+  "additional_params": {
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "performance": {
+    "test_accuracy": 0.9671682626538988,
+    "test_f1_score": 0.7894736842105263,
+    "cv_f1_mean": 0.8121459722229941,
+    "cv_f1_std": 0.03428216238949521
+  }
+}
